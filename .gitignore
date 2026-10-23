@@ -1,0 +1,12 @@
+# Build outputs & Executables
+*.exe
+*.o
+*.obj
+bin/
+build/
+out/
+
+# IDE / Editor folders
+.vscode/
+.vs/
+*.vcxproj.user
