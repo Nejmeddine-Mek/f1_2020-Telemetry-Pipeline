@@ -10,7 +10,7 @@
 #include <ws2tcpip.h>
 #include <vector>
 #include <mutex>
-#include "./packetQueue.cpp"
+#include "./packetQueue.hpp"
 #pragma comment(lib, "ws2_32.lib")
 typedef int socklen_t;
 
