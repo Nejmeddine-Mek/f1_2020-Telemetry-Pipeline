@@ -11,9 +11,11 @@ private:
     std::queue<std::vector<uint8_t>> queue;
     std::mutex mtx;
     std::condition_variable cv;
+    bool stopRequested = false;
 public:
     void push(std::vector<uint8_t> packet);
     std::vector<uint8_t> pop();
+    void stop();
 };
 
 #endif

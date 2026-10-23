@@ -20,3 +20,11 @@
         queue.pop();
         return packet;
     }
+
+    void PacketQueue::stop() {
+        {
+            std::lock_guard<std::mutex> lock(mtx);
+            stopRequested = true;
+        }
+        cv.notify_all();
+    }
